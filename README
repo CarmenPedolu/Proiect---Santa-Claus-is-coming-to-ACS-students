@@ -1,0 +1,45 @@
+Pedolu Carmen-Petronela, 322CA
+Object Oriented Programming Course
+Project - Santa-Claus-is-coming-to-ACS-students
+
+December 2021
+
+Am creat clasa Input, care contine inputul primit si pe care il voi folosi pentru
+output. Outputul este in reprezentat prin clasa SantaComing care contine o lista
+de liste de copii care contin campurile pentru output, reprezentati prin
+ChildOutput. Pentru Clasele Input si SantaComing am folosit design pattern-ul
+Singleton, folosind instantierea eager.
+
+In clasa main, am citit inputul de la fiecare test, folosind biblioteca Jackson,
+si pentru fiecare runda am facut simularea si am scris outputul.
+
+Pentru a simula fiecare runda am folosit un strategy pattern in care foloseam
+clasa RoundContext in care imi setam numarul rundei pe care vreau sa o simulez
+si in functie de numarul rundei setam si tipul strategiei. Daca era runda 0,
+foloseam FirstRound, altfel foloseam NextRound.
+
+Pentru a realiza simularile pentru FirstRound si NextRound am folosit design
+pattern-ul command, prin care apelam comanda pe care voiam sa o fac.
+In FirstRound, calculam suma scorurilor average de la toti copiii, folosind
+comanda sumAvgScores, calculam budgetUnit, aplicam comanda giftsDistribution
+pentru budgetUit si apoi adaugam copiii in output, creand o noua lista de liste
+si folosind comanda PutSantaComing pentru noua lista de liste.
+In NextRound, incrementam varsta tuturor copiilor folosind comanda IncreaseAge,
+sterg copii de tipul Young Adults folosind comanda DeleteYoungAdults, facem
+schimbarile folosind design pattern-ul Abstract Factory, calculam suma scorurilor
+average de la toti copiii, folosind comanda sumAvgScores din clasa, calculam
+budgetUnit, aplicam comanda giftsDistribution pentru budgetUit si apoi adaugam
+copiii in output, folosind actuala lista de liste si comanda putSantaComing
+pentru lista de liste.
+
+Pentru a face update-urile, am folosit pattern-ul Abstract Factory pentru clasa
+UpdatesFactory, si foloseste factory method pentru metoda getUpdate. Astfel, in
+NextRound este apelata metoda getUpdate pentru fiecare tip de update si se face
+update-ul pentru copii, pentru nould buget al mosului si se adauga noii copii si
+noile cadouri, apeland metoda update.
+
+Pentru a calcula scorul mediu al fiecarui copil, am folosit design pattern-ul
+strategy. Astfel, in cadrul comezii SumAvgScores, setam pentru fiecare copil
+strategia prin care se calcula scorul mediu, si apoi calculam scorul mediu
+folosind setata, iar apoi faceam suma tuturor scorurilor, si o retineam in
+campul sumAvgScores din clasa Input.
