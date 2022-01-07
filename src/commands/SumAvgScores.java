@@ -43,11 +43,8 @@ public class SumAvgScores implements Command {
             double avgScore = child.getAvgScoreStrategy().
                     calculateAvgScore(child.getNiceScoreHistory());
             avgScore += avgScore * child.getNiceScoreBonus() / 100;
-//            if (avgScore > 10) {
-//                avgScore = 10;
-//            }
             child.setAvgScore(avgScore);
-            sumAvgScores = sumAvgScores + avgScore;
+            sumAvgScores += avgScore;
         }
         input.setSumAvgScores(sumAvgScores);
     }

@@ -104,13 +104,17 @@
       "niceScoreHistory" : [ 2.0 ],
       "assignedBudget" : 94.26666666666665,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Monopoly",
+        "productName" : "Twilight",
         "price" : 30.0,
-        "category" : "Board Games"
+        "category" : "Books"
+      }, {
+        "productName" : "Chocolate",
+        "price" : 15.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       } ]
     }, {
       "id" : 2,
@@ -123,12 +127,16 @@
       "niceScoreHistory" : [ 3.0, 10.0 ],
       "assignedBudget" : 306.3666666666667,
       "receivedGifts" : [ {
+        "productName" : "Handbag",
+        "price" : 200.0,
+        "category" : "Clothes"
+      }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
       } ]
     } ]
@@ -159,13 +167,17 @@
       "niceScoreHistory" : [ 2.0 ],
       "assignedBudget" : 90.60582524271845,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
       } ]
     }, {
       "id" : 2,
@@ -178,12 +190,16 @@
       "niceScoreHistory" : [ 3.0, 10.0, 6.0 ],
       "assignedBudget" : 309.5699029126214,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Handbag",
+        "price" : 200.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
         "category" : "Toys"
       }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
+        "productName" : "Puzzle",
+        "price" : 50.0,
         "category" : "Board Games"
       } ]
     } ]

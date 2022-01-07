@@ -122,12 +122,8 @@
       "niceScoreHistory" : [ 9.0, 4.0, 9.0 ],
       "assignedBudget" : 263.00206185567015,
       "receivedGifts" : [ {
-        "productName" : "Bike",
-        "price" : 25.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       } ]
     }, {
@@ -141,13 +137,17 @@
       "niceScoreHistory" : [ 3.0, 0.0, 7.0 ],
       "assignedBudget" : 209.66597938144332,
       "receivedGifts" : [ {
+        "productName" : "Chocolate",
+        "price" : 15.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Diary of a Wimpy Kid",
+        "price" : 25.0,
+        "category" : "Books"
+      }, {
         "productName" : "Uno",
         "price" : 10.0,
         "category" : "Board Games"
-      }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
-        "category" : "Sweets"
       } ]
     }, {
       "id" : 2,
@@ -168,8 +168,8 @@
         "price" : 25.0,
         "category" : "Toys"
       }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       }, {
         "productName" : "Diary of a Wimpy Kid",
@@ -189,12 +189,12 @@
       "niceScoreHistory" : [ 9.0, 4.0, 9.0 ],
       "assignedBudget" : 71.60208452312963,
       "receivedGifts" : [ {
-        "productName" : "Bike",
+        "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
-        "category" : "Toys"
+        "category" : "Books"
       }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       } ]
     }, {
@@ -208,13 +208,17 @@
       "niceScoreHistory" : [ 3.0, 0.0, 7.0, 10.0 ],
       "assignedBudget" : 130.4717304397487,
       "receivedGifts" : [ {
+        "productName" : "Chocolate",
+        "price" : 15.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Diary of a Wimpy Kid",
+        "price" : 25.0,
+        "category" : "Books"
+      }, {
         "productName" : "Uno",
         "price" : 10.0,
         "category" : "Board Games"
-      }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
-        "category" : "Sweets"
       } ]
     }, {
       "id" : 2,
@@ -231,12 +235,8 @@
         "price" : 10.0,
         "category" : "Board Games"
       }, {
-        "productName" : "Bike",
-        "price" : 25.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       }, {
         "productName" : "Diary of a Wimpy Kid",

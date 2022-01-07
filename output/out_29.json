@@ -191,9 +191,9 @@
       "niceScoreHistory" : [ 4.0, 8.0, 8.0 ],
       "assignedBudget" : 256.4677804295943,
       "receivedGifts" : [ {
-        "productName" : "Bag of Candy",
-        "price" : 20.0,
-        "category" : "Sweets"
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
       }, {
         "productName" : "Doll",
         "price" : 10.0,
@@ -221,14 +221,6 @@
         "productName" : "Doll",
         "price" : 10.0,
         "category" : "Toys"
-      }, {
-        "productName" : "Milk and Cookies",
-        "price" : 30.0,
-        "category" : "Sweets"
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books"
       } ]
     }, {
       "id" : 3,
@@ -241,13 +233,17 @@
       "niceScoreHistory" : [ 8.0, 5.0 ],
       "assignedBudget" : 99.73747016706444,
       "receivedGifts" : [ {
-        "productName" : "Doll",
-        "price" : 10.0,
-        "category" : "Toys"
-      }, {
         "productName" : "Harry Potter",
         "price" : 35.0,
         "category" : "Books"
+      }, {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       } ]
     }, {
       "id" : 4,
@@ -259,7 +255,11 @@
       "averageScore" : 16.0,
       "niceScoreHistory" : [ 10.0 ],
       "assignedBudget" : 296.3627684964201,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      } ]
     }, {
       "id" : 5,
       "lastName" : "Ionescu",
@@ -270,7 +270,11 @@
       "averageScore" : 6.0,
       "niceScoreHistory" : [ 6.0 ],
       "assignedBudget" : 85.4892601431981,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Uno",
+        "price" : 10.0,
+        "category" : "Board Games"
+      } ]
     } ]
   }, {
     "children" : [ {
@@ -284,16 +288,16 @@
       "niceScoreHistory" : [ 4.0, 8.0, 8.0 ],
       "assignedBudget" : 268.2915397234591,
       "receivedGifts" : [ {
-        "productName" : "Bag of Candy",
-        "price" : 20.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       }, {
-        "productName" : "Doll",
-        "price" : 10.0,
+        "productName" : "Castle",
+        "price" : 15.0,
         "category" : "Toys"
       }, {
-        "productName" : "Uno",
-        "price" : 10.0,
+        "productName" : "Monopoly",
+        "price" : 30.0,
         "category" : "Board Games"
       } ]
     }, {
@@ -307,21 +311,17 @@
       "niceScoreHistory" : [ 7.0, 4.0, 5.0, 3.0 ],
       "assignedBudget" : 116.81860792125613,
       "receivedGifts" : [ {
-        "productName" : "Uno",
-        "price" : 10.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Doll",
-        "price" : 10.0,
+        "productName" : "Car",
+        "price" : 20.0,
         "category" : "Toys"
       }, {
-        "productName" : "Milk and Cookies",
+        "productName" : "Monopoly",
         "price" : 30.0,
-        "category" : "Sweets"
+        "category" : "Board Games"
       }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books"
+        "productName" : "Chocolate",
+        "price" : 15.0,
+        "category" : "Sweets"
       } ]
     }, {
       "id" : 3,
@@ -334,13 +334,21 @@
       "niceScoreHistory" : [ 8.0, 5.0, 10.0 ],
       "assignedBudget" : 222.83102882587298,
       "receivedGifts" : [ {
-        "productName" : "Doll",
-        "price" : 10.0,
-        "category" : "Toys"
+        "productName" : "Chocolate",
+        "price" : 15.0,
+        "category" : "Sweets"
       }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books"
+        "productName" : "Headphones",
+        "price" : 100.0,
+        "category" : "Technology"
+      }, {
+        "productName" : "Monopoly",
+        "price" : 30.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Castle",
+        "price" : 15.0,
+        "category" : "Toys"
       } ]
     }, {
       "id" : 4,

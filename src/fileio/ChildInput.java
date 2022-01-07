@@ -41,6 +41,23 @@ public final class ChildInput {
     public ChildInput() {
     }
 
+    public ChildInput(ChildInput child) {
+        id = child.getId();
+        lastname = child.getLastname();
+        firstname = child.getFirstname();
+        city = child.getCity();
+        age = child.getAge();
+        niceScore = child.niceScore;
+        giftsPreferences = child.getGiftsPreferences();
+        niceScoreHistory = child.getNiceScoreHistory();
+        avgScore = child.getAvgScore();
+        assignedBudget = child.getAssignedBudget();
+        receivedGifts = child.getReceivedGifts();
+        avgScoreStrategy = child.getAvgScoreStrategy();
+        niceScoreBonus = child.niceScoreBonus;
+        elf = child.getElf();
+    }
+
     public int getId() {
         return id;
     }

@@ -24,16 +24,15 @@ public class IdDistribution implements StrategyGiftDistribution {
             for (Category category : giftsPref) {
                 SantaGiftsInput givedGift = null;
                 for (SantaGiftsInput gift : santaGifts) {
-                    if (gift.getQuantity() > 0) {
                         // Give the cheapest gift from that category
                         if (category.equals(gift.getCategory())
-                                && childAssignedBudget > gift.getPrice()) {
+                                && childAssignedBudget > gift.getPrice()
+                                && gift.getQuantity() > 0) {
                             if (givedGift == null) {
                                 givedGift = gift;
                             } else {
                                 if (givedGift.getPrice() > gift.getPrice()) {
                                     givedGift = gift;
-                                }
                             }
                         }
                     }

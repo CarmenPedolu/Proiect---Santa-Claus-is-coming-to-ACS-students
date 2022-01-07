@@ -164,12 +164,12 @@
       "niceScoreHistory" : [ 2.0, 10.0, 8.0 ],
       "assignedBudget" : 211.0086281276963,
       "receivedGifts" : [ {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       }, {
-        "productName" : "Doll",
-        "price" : 10.0,
+        "productName" : "Teddy Bear",
+        "price" : 5.0,
         "category" : "Toys"
       } ]
     }, {
@@ -187,9 +187,13 @@
         "price" : 100.0,
         "category" : "Technology"
       }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
+      }, {
+        "productName" : "Monopoly",
+        "price" : 30.0,
+        "category" : "Board Games"
       } ]
     }, {
       "id" : 3,
@@ -202,21 +206,21 @@
       "niceScoreHistory" : [ 10.0, 5.0, 5.0 ],
       "assignedBudget" : 187.23037100949097,
       "receivedGifts" : [ {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Doll",
-        "price" : 10.0,
-        "category" : "Toys"
-      }, {
         "productName" : "Headphones",
         "price" : 100.0,
         "category" : "Technology"
       }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
-        "category" : "Sweets"
+        "productName" : "Monopoly",
+        "price" : 30.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Bike",
+        "price" : 25.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
       } ]
     }, {
       "id" : 4,
@@ -228,7 +232,19 @@
       "averageScore" : 10.4,
       "niceScoreHistory" : [ 8.0 ],
       "assignedBudget" : 292.0793787748059,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Monopoly",
+        "price" : 30.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Bike",
+        "price" : 25.0,
+        "category" : "Toys"
+      } ]
     }, {
       "id" : 5,
       "lastName" : "Cantemir",
@@ -239,7 +255,19 @@
       "averageScore" : 3.9,
       "niceScoreHistory" : [ 3.0 ],
       "assignedBudget" : 76.67083692838654,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Monopoly",
+        "price" : 30.0,
+        "category" : "Board Games"
+      }, {
+        "productName" : "Bike",
+        "price" : 25.0,
+        "category" : "Toys"
+      }, {
+        "productName" : "Chocolate",
+        "price" : 15.0,
+        "category" : "Sweets"
+      } ]
     } ]
   }, {
     "children" : [ {
@@ -253,12 +281,12 @@
       "niceScoreHistory" : [ 2.0, 10.0, 8.0, 8.0 ],
       "assignedBudget" : 138.66992757031323,
       "receivedGifts" : [ {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
+        "productName" : "Chocolate",
+        "price" : 15.0,
         "category" : "Sweets"
       }, {
-        "productName" : "Doll",
-        "price" : 10.0,
+        "productName" : "Bike",
+        "price" : 25.0,
         "category" : "Toys"
       } ]
     }, {
@@ -272,13 +300,17 @@
       "niceScoreHistory" : [ 4.0, 6.0 ],
       "assignedBudget" : 114.45771799454427,
       "receivedGifts" : [ {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology"
+        "productName" : "Monopoly",
+        "price" : 30.0,
+        "category" : "Board Games"
       }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
-        "category" : "Sweets"
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
+      }, {
+        "productName" : "Bike",
+        "price" : 25.0,
+        "category" : "Toys"
       } ]
     }, {
       "id" : 3,
@@ -291,21 +323,9 @@
       "niceScoreHistory" : [ 10.0, 5.0, 5.0, 7.0 ],
       "assignedBudget" : 111.43119179757315,
       "receivedGifts" : [ {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Doll",
-        "price" : 10.0,
+        "productName" : "Bike",
+        "price" : 25.0,
         "category" : "Toys"
-      }, {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology"
-      }, {
-        "productName" : "Gummy Bears",
-        "price" : 10.0,
-        "category" : "Sweets"
       } ]
     }, {
       "id" : 4,
@@ -317,7 +337,11 @@
       "averageScore" : 5.2,
       "niceScoreHistory" : [ 8.0, 0.0 ],
       "assignedBudget" : 66.0332988430063,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Lego",
+        "price" : 30.0,
+        "category" : "Toys"
+      } ]
     }, {
       "id" : 5,
       "lastName" : "Cantemir",
@@ -328,7 +352,11 @@
       "averageScore" : 5.633333333333333,
       "niceScoreHistory" : [ 3.0, 5.0 ],
       "assignedBudget" : 92.99689587056722,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Lego",
+        "price" : 30.0,
+        "category" : "Toys"
+      } ]
     } ]
   }, {
     "children" : [ {
@@ -346,17 +374,9 @@
         "price" : 200.0,
         "category" : "Clothes"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
+        "productName" : "Lego",
+        "price" : 30.0,
         "category" : "Toys"
-      }, {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology"
-      }, {
-        "productName" : "Chocolate",
-        "price" : 15.0,
-        "category" : "Sweets"
       } ]
     }, {
       "id" : 3,
@@ -384,16 +404,8 @@
       "niceScoreHistory" : [ 8.0, 0.0, 10.0 ],
       "assignedBudget" : 178.69365373760178,
       "receivedGifts" : [ {
-        "productName" : "Monopoly",
+        "productName" : "Lego",
         "price" : 30.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Twilight",
-        "price" : 30.0,
-        "category" : "Books"
-      }, {
-        "productName" : "Bike",
-        "price" : 25.0,
         "category" : "Toys"
       } ]
     }, {
@@ -406,19 +418,7 @@
       "averageScore" : 8.666666666666668,
       "niceScoreHistory" : [ 3.0, 5.0, 9.0 ],
       "assignedBudget" : 138.98395290702362,
-      "receivedGifts" : [ {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Bike",
-        "price" : 25.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Chocolate",
-        "price" : 15.0,
-        "category" : "Sweets"
-      } ]
+      "receivedGifts" : [ ]
     }, {
       "id" : 6,
       "lastName" : "Popa",
@@ -429,19 +429,7 @@
       "averageScore" : 7.2,
       "niceScoreHistory" : [ 6.0 ],
       "assignedBudget" : 214.43238448512216,
-      "receivedGifts" : [ {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games"
-      }, {
-        "productName" : "Bike",
-        "price" : 25.0,
-        "category" : "Toys"
-      }, {
-        "productName" : "Chocolate",
-        "price" : 15.0,
-        "category" : "Sweets"
-      } ]
+      "receivedGifts" : [ ]
     } ]
   } ]
 }

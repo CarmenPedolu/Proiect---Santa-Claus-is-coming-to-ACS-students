@@ -43,7 +43,19 @@
       "averageScore" : 18.0,
       "niceScoreHistory" : [ 4.0 ],
       "assignedBudget" : 934.0,
-      "receivedGifts" : [ ]
+      "receivedGifts" : [ {
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
+      }, {
+        "productName" : "Iphone",
+        "price" : 700.0,
+        "category" : "Technology"
+      } ]
     } ]
   } ]
 }
