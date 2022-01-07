@@ -27,7 +27,7 @@ public final class ChildOutput {
     @JsonProperty("assignedBudget")
     private double assignedBudget;
     @JsonProperty("receivedGifts")
-    private List<SantaGiftsInput> receivedGifts;
+    private List<SantaGiftsOutput> receivedGifts;
 
     public ChildOutput(final ChildInput child) {
         id = child.getId();
@@ -40,7 +40,12 @@ public final class ChildOutput {
         niceScoreHistory.addAll(child.getNiceScoreHistory());
         avgScore = child.getAvgScore();
         assignedBudget = child.getAssignedBudget();
-        receivedGifts = child.getReceivedGifts();
+        receivedGifts = new ArrayList<>();
+        if (child.getReceivedGifts() != null) {
+            for (SantaGiftsInput initialGift : child.getReceivedGifts()) {
+                receivedGifts.add(new SantaGiftsOutput(initialGift));
+            }
+        }
     }
 
     public int getId() {
@@ -107,11 +112,11 @@ public final class ChildOutput {
         this.assignedBudget = assignedBudget;
     }
 
-    public List<SantaGiftsInput> getReceivedGifts() {
+    public List<SantaGiftsOutput> getReceivedGifts() {
         return receivedGifts;
     }
 
-    public void setReceivedGifts(final List<SantaGiftsInput> receivedGifts) {
+    public void setReceivedGifts(final List<SantaGiftsOutput> receivedGifts) {
         this.receivedGifts = receivedGifts;
     }
 

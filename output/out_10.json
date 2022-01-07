@@ -13,18 +13,15 @@
       "receivedGifts" : [ {
         "productName" : "Milk and Cookies",
         "price" : 30.0,
-        "category" : "Sweets",
-        "quantity" : 1
+        "category" : "Sweets"
       }, {
         "productName" : "Headphones",
         "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 6
+        "category" : "Technology"
       }, {
         "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
-        "category" : "Books",
-        "quantity" : 4
+        "category" : "Books"
       } ]
     }, {
       "id" : 1,
@@ -39,13 +36,11 @@
       "receivedGifts" : [ {
         "productName" : "Castle",
         "price" : 15.0,
-        "category" : "Toys",
-        "quantity" : 3
+        "category" : "Toys"
       }, {
         "productName" : "Headphones",
         "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 6
+        "category" : "Technology"
       } ]
     } ]
   }, {
@@ -60,20 +55,13 @@
       "niceScoreHistory" : [ 7.0 ],
       "assignedBudget" : 520.8,
       "receivedGifts" : [ {
-        "productName" : "Milk and Cookies",
-        "price" : 30.0,
-        "category" : "Sweets",
-        "quantity" : 1
-      }, {
         "productName" : "Headphones",
         "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 6
+        "category" : "Technology"
       }, {
         "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
-        "category" : "Books",
-        "quantity" : 4
+        "category" : "Books"
       } ]
     }, {
       "id" : 1,
@@ -88,13 +76,11 @@
       "receivedGifts" : [ {
         "productName" : "Castle",
         "price" : 15.0,
-        "category" : "Toys",
-        "quantity" : 3
+        "category" : "Toys"
       }, {
         "productName" : "Headphones",
         "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 6
+        "category" : "Technology"
       } ]
     } ]
   }, {
@@ -109,20 +95,13 @@
       "niceScoreHistory" : [ 7.0, 2.0 ],
       "assignedBudget" : 381.91999999999996,
       "receivedGifts" : [ {
-        "productName" : "Milk and Cookies",
-        "price" : 30.0,
-        "category" : "Sweets",
-        "quantity" : 1
-      }, {
         "productName" : "Headphones",
         "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 6
+        "category" : "Technology"
       }, {
         "productName" : "Diary of a Wimpy Kid",
         "price" : 25.0,
-        "category" : "Books",
-        "quantity" : 4
+        "category" : "Books"
       } ]
     }, {
       "id" : 1,
@@ -137,13 +116,11 @@
       "receivedGifts" : [ {
         "productName" : "Castle",
         "price" : 15.0,
-        "category" : "Toys",
-        "quantity" : 3
+        "category" : "Toys"
       }, {
         "productName" : "Headphones",
         "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 6
+        "category" : "Technology"
       } ]
     } ]
   } ]

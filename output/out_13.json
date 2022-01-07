@@ -13,13 +13,11 @@
       "receivedGifts" : [ {
         "productName" : "Bag of Candy",
         "price" : 20.0,
-        "category" : "Sweets",
-        "quantity" : 5
+        "category" : "Sweets"
       }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
+        "category" : "Toys"
       } ]
     }, {
       "id" : 1,
@@ -32,15 +30,13 @@
       "niceScoreHistory" : [ 10.0 ],
       "assignedBudget" : 57.5,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       }, {
         "productName" : "Twilight",
         "price" : 30.0,
-        "category" : "Books",
-        "quantity" : 8
+        "category" : "Books"
       } ]
     }, {
       "id" : 2,
@@ -55,13 +51,11 @@
       "receivedGifts" : [ {
         "productName" : "Monopoly",
         "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "category" : "Board Games"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       } ]
     } ]
   }, {
@@ -76,10 +70,13 @@
       "niceScoreHistory" : [ 5.0, 0.0 ],
       "assignedBudget" : 16.046511627906977,
       "receivedGifts" : [ {
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
+      }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
+        "category" : "Toys"
       } ]
     }, {
       "id" : 1,
@@ -92,15 +89,13 @@
       "niceScoreHistory" : [ 10.0 ],
       "assignedBudget" : 64.18604651162791,
       "receivedGifts" : [ {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
+        "productName" : "Twilight",
+        "price" : 30.0,
+        "category" : "Books"
       } ]
     }, {
       "id" : 2,
@@ -113,15 +108,13 @@
       "niceScoreHistory" : [ 9.0 ],
       "assignedBudget" : 57.76744186046511,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
-      }, {
         "productName" : "Monopoly",
         "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       } ]
     } ]
   }, {
@@ -136,25 +129,13 @@
       "niceScoreHistory" : [ 5.0, 0.0, 3.0 ],
       "assignedBudget" : 189.53846153846158,
       "receivedGifts" : [ {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 7
-      }, {
         "productName" : "Bag of Candy",
         "price" : 20.0,
-        "category" : "Sweets",
-        "quantity" : 5
+        "category" : "Sweets"
       }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
-      }, {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "category" : "Toys"
       } ]
     }, {
       "id" : 2,
@@ -167,25 +148,13 @@
       "niceScoreHistory" : [ 9.0, 5.0 ],
       "assignedBudget" : 514.4615384615385,
       "receivedGifts" : [ {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 7
-      }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
-      }, {
-        "productName" : "Twilight",
-        "price" : 30.0,
-        "category" : "Books",
-        "quantity" : 8
-      }, {
         "productName" : "Monopoly",
         "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       } ]
     } ]
   }, {
@@ -200,20 +169,13 @@
       "niceScoreHistory" : [ 5.0, 0.0, 3.0 ],
       "assignedBudget" : 134.06060606060606,
       "receivedGifts" : [ {
-        "productName" : "Monopoly",
-        "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "productName" : "Bag of Candy",
+        "price" : 20.0,
+        "category" : "Sweets"
       }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
-      }, {
-        "productName" : "Bag of Candy",
-        "price" : 20.0,
-        "category" : "Sweets",
-        "quantity" : 5
+        "category" : "Toys"
       } ]
     }, {
       "id" : 2,
@@ -226,25 +188,13 @@
       "niceScoreHistory" : [ 9.0, 5.0, 0.0 ],
       "assignedBudget" : 181.93939393939394,
       "receivedGifts" : [ {
-        "productName" : "Headphones",
-        "price" : 100.0,
-        "category" : "Technology",
-        "quantity" : 7
-      }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 1
-      }, {
-        "productName" : "Twilight",
-        "price" : 30.0,
-        "category" : "Books",
-        "quantity" : 8
-      }, {
         "productName" : "Monopoly",
         "price" : 30.0,
-        "category" : "Board Games",
-        "quantity" : 4
+        "category" : "Board Games"
+      }, {
+        "productName" : "Doll",
+        "price" : 10.0,
+        "category" : "Toys"
       } ]
     } ]
   } ]

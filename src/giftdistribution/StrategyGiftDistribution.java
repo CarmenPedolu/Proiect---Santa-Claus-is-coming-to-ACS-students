@@ -1,2 +1,5 @@
-package giftdistribution;public interface StrategyGiftDistribution {
+package giftdistribution;
+
+public interface StrategyGiftDistribution {
+    void distribute();
 }

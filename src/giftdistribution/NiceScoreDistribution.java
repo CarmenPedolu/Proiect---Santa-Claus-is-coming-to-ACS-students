@@ -1,2 +1,8 @@
-package giftdistribution;public class NiceScoreDistribution {
+package giftdistribution;
+
+public class NiceScoreDistribution implements StrategyGiftDistribution {
+    @Override
+    public void distribute() {
+
+    }
 }

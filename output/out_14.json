@@ -13,13 +13,11 @@
       "receivedGifts" : [ {
         "productName" : "Puzzle",
         "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
+        "category" : "Board Games"
       }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
+        "category" : "Toys"
       } ]
     }, {
       "id" : 1,
@@ -34,13 +32,11 @@
       "receivedGifts" : [ {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
+        "category" : "Toys"
       }, {
         "productName" : "Dress",
         "price" : 45.0,
-        "category" : "Clothes",
-        "quantity" : 7
+        "category" : "Clothes"
       } ]
     } ]
   }, {
@@ -57,13 +53,11 @@
       "receivedGifts" : [ {
         "productName" : "Puzzle",
         "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
+        "category" : "Board Games"
       }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
+        "category" : "Toys"
       } ]
     }, {
       "id" : 1,
@@ -78,13 +72,11 @@
       "receivedGifts" : [ {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
+        "category" : "Toys"
       }, {
         "productName" : "Dress",
         "price" : 45.0,
-        "category" : "Clothes",
-        "quantity" : 7
+        "category" : "Clothes"
       } ]
     }, {
       "id" : 2,
@@ -96,17 +88,7 @@
       "averageScore" : 7.0,
       "niceScoreHistory" : [ 7.0 ],
       "assignedBudget" : 221.54999999999998,
-      "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books",
-        "quantity" : 5
-      } ]
+      "receivedGifts" : [ ]
     } ]
   }, {
     "children" : [ {
@@ -120,25 +102,13 @@
       "niceScoreHistory" : [ 4.0, 3.0, 9.0 ],
       "assignedBudget" : 324.6153846153846,
       "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books",
-        "quantity" : 5
-      }, {
-        "productName" : "Dress",
-        "price" : 45.0,
-        "category" : "Clothes",
-        "quantity" : 7
-      }, {
         "productName" : "Puzzle",
         "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
+        "category" : "Board Games"
+      }, {
+        "productName" : "Teddy Bear",
+        "price" : 5.0,
+        "category" : "Toys"
       } ]
     }, {
       "id" : 1,
@@ -151,15 +121,13 @@
       "niceScoreHistory" : [ 7.0, 1.0, 2.0 ],
       "assignedBudget" : 81.15384615384615,
       "receivedGifts" : [ {
-        "productName" : "Dress",
-        "price" : 45.0,
-        "category" : "Clothes",
-        "quantity" : 7
-      }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
+        "category" : "Toys"
+      }, {
+        "productName" : "Dress",
+        "price" : 45.0,
+        "category" : "Clothes"
       } ]
     }, {
       "id" : 2,
@@ -171,22 +139,7 @@
       "averageScore" : 7.0,
       "niceScoreHistory" : [ 7.0 ],
       "assignedBudget" : 227.23076923076923,
-      "receivedGifts" : [ {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
-      }, {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books",
-        "quantity" : 5
-      } ]
+      "receivedGifts" : [ ]
     } ]
   }, {
     "children" : [ {
@@ -202,23 +155,11 @@
       "receivedGifts" : [ {
         "productName" : "Puzzle",
         "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
+        "category" : "Board Games"
       }, {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books",
-        "quantity" : 5
-      }, {
-        "productName" : "Dress",
-        "price" : 45.0,
-        "category" : "Clothes",
-        "quantity" : 7
+        "category" : "Toys"
       } ]
     }, {
       "id" : 1,
@@ -233,13 +174,11 @@
       "receivedGifts" : [ {
         "productName" : "Teddy Bear",
         "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
+        "category" : "Toys"
       }, {
         "productName" : "Dress",
         "price" : 45.0,
-        "category" : "Clothes",
-        "quantity" : 7
+        "category" : "Clothes"
       } ]
     }, {
       "id" : 2,
@@ -251,22 +190,7 @@
       "averageScore" : 4.333333333333333,
       "niceScoreHistory" : [ 7.0, 3.0 ],
       "assignedBudget" : 147.0625,
-      "receivedGifts" : [ {
-        "productName" : "Teddy Bear",
-        "price" : 5.0,
-        "category" : "Toys",
-        "quantity" : 4
-      }, {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books",
-        "quantity" : 5
-      } ]
+      "receivedGifts" : [ ]
     }, {
       "id" : 3,
       "lastName" : "Cantemir",
@@ -277,17 +201,7 @@
       "averageScore" : 9.0,
       "niceScoreHistory" : [ 9.0 ],
       "assignedBudget" : 305.4375,
-      "receivedGifts" : [ {
-        "productName" : "Puzzle",
-        "price" : 50.0,
-        "category" : "Board Games",
-        "quantity" : 1
-      }, {
-        "productName" : "Harry Potter",
-        "price" : 35.0,
-        "category" : "Books",
-        "quantity" : 5
-      } ]
+      "receivedGifts" : [ ]
     } ]
   } ]
 }

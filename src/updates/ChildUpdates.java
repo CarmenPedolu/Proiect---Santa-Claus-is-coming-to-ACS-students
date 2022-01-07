@@ -37,6 +37,8 @@ final class ChildUpdates extends Changes {
                         List<Category> currentGiftsPref = new ArrayList<>(hashSet);
                         child.setGiftsPreferences(currentGiftsPref);
                     }
+                    // Add the new elf
+                    child.setElf(childChanged.getElf());
                 }
             }
         }

@@ -29,7 +29,7 @@ public final class Main {
      * @param args the arguments used to call the main method
      */
     public static void main(final String[] args) throws IOException {
-        for (int i = 1; i <= 19; i++) {
+        for (int i = 1; i <= Constants.TESTS_NUMBER; i++) {
             File inputFile = new File(Constants.TESTS_PATH + i + Constants.FILE_EXTENSION);
             Path path = Paths.get(Constants.OUTPUT_PATH);
             if (!Files.exists(path)) {
