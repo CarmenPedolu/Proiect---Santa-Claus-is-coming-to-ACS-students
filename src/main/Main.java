@@ -50,7 +50,8 @@ public final class Main {
                 context.action();
             }
 
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(outputFile, SantaComing.getAnnualSanta());
+            objectMapper.writerWithDefaultPrettyPrinter()
+                    .writeValue(outputFile, SantaComing.getAnnualSanta());
         }
         Checker.calculateScore();
     }

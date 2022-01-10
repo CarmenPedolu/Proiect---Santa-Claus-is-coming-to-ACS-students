@@ -1,14 +1,20 @@
 package giftdistribution;
 
-import enums.Category;
+import commands.GiftsDistribution;
+import commands.RoundInvoker;
 import enums.Cities;
 import fileio.ChildInput;
 import fileio.Input;
 import fileio.SantaGiftsInput;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Comparator;
 
-public class NiceScoreCityDistribution implements StrategyGiftDistribution {
+
+public final class NiceScoreCityDistribution implements StrategyGiftDistribution {
     @Override
     public void distribute() {
         Input input = Input.getInput();
@@ -24,71 +30,53 @@ public class NiceScoreCityDistribution implements StrategyGiftDistribution {
                     childCount++;
                 }
             }
-            map.put(city, avgCitySum / childCount);
-        }
-        // sortez mapul in functie de valori si returnez o lista de orase sortate de la avgscore cel mai mare la cel mai mic
-        List<Cities> citiesSorted = new ArrayList(map.entrySet().stream().sorted(new Comparator<Map.Entry<Cities, Double>>() {
-            @Override
-            public int compare(Map.Entry<Cities, Double> o1, Map.Entry<Cities, Double> o2) {
-                return o2.getValue().compareTo(o1.getValue());
+            double avgCity = 0;
+            if (avgCitySum != 0) {
+                avgCity = avgCitySum / childCount;
             }
-        }).map(Map.Entry::getKey).toList());
+            map.put(city, avgCity);
+        }
+        // sortez mapul in functie de valori si
+        // returnez o lista de orase sortate de la avgscore cel mai mare la cel mai mic
+        List<Cities> citiesSorted = new ArrayList(map.entrySet().stream()
+                .sorted(new Comparator<Map.Entry<Cities, Double>>() {
+                    @Override
+                    public int compare(final Map.Entry<Cities, Double> city1,
+                                       final Map.Entry<Cities, Double> city2) {
+                        if (city1.getValue() > city2.getValue()) {
+                            return -1;
+                        } else if (city1.getValue() < city2.getValue()) {
+                            return 1;
+                        } else {
+                            return (city1.getKey().toString().compareTo(city2.getKey().toString()));
+                        }
+                    }
+                }).map(Map.Entry::getKey).toList());
+
         //fac o noua lista de copii si adaug copiii in lista noua in ordinea oraselor
         List<ChildInput> copyChildren = new ArrayList<>();
         for (Cities city : citiesSorted) {
             for (ChildInput child : allChildren) {
                 if (child.getCity().equals(city)) {
-                    copyChildren.add(new ChildInput(child));
+                    copyChildren.add(new ChildInput.Builder(child.getId(), child.getLastname(),
+                            child.getFirstname(), child.getCity(), child.getAge(),
+                            child.getNiceScore(), child.getGiftsPreferences(), child.getElf())
+                            .avgScore(child.getAvgScore())
+                            .assignedBudget(child.getAssignedBudget()).build());
                 }
             }
         }
 
-        List<SantaGiftsInput> santaGifts = input.getInitialData().getSantaGifts();
         // fac distribuirea pentru copyChildren
-        for (ChildInput child : copyChildren) {
-            double childAssignedBudget = child.getAssignedBudget();
-
-            List<Category> giftsPref = child.getGiftsPreferences();
-            List<SantaGiftsInput> receivedGifts = new ArrayList<>();
-            child.setReceivedGifts(receivedGifts);
-            for (Category category : giftsPref) {
-                SantaGiftsInput givedGift = null;
-                for (SantaGiftsInput gift : santaGifts) {
-                    // Give the cheapest gift from that category
-                    if (category.equals(gift.getCategory())
-                            && childAssignedBudget > gift.getPrice()
-                            && gift.getQuantity() > 0) {
-                        if (givedGift == null) {
-                            givedGift = gift;
-                        } else {
-                            if (givedGift.getPrice() > gift.getPrice()) {
-                                givedGift = gift;
-                            }
-                        }
-
-                    }
-                }
-                // Add the gift in the received gifts list
-                if (givedGift != null) {
-                    receivedGifts.add(givedGift);
-                    child.setReceivedGifts(receivedGifts);
-                    childAssignedBudget = childAssignedBudget - givedGift.getPrice();
-                    // Scad cantitatea cadoului
-                    for (SantaGiftsInput gift : santaGifts) {
-                        if (gift.getPrice().equals(givedGift.getPrice()) && gift.getCategory().equals(givedGift.getCategory())) {
-                            gift.setQuantity(gift.getQuantity() - 1);
-                        }
-                    }
-                }
-            }
-        }
+        RoundInvoker round = new RoundInvoker();
+        round.execute(new GiftsDistribution(copyChildren));
 
         // copiez cadourile primite ale copiilor din copychildren in cel normal
         for (ChildInput child : copyChildren) {
             for (ChildInput childInput : allChildren) {
                 if (child.getId() == childInput.getId()) {
-                    List<SantaGiftsInput> receivedGifts = new ArrayList<>(child.getReceivedGifts());
-                    childInput.setReceivedGifts(receivedGifts);
+                    List<SantaGiftsInput> receivedGift = new ArrayList<>(child.getReceivedGifts());
+                    childInput.setReceivedGifts(receivedGift);
                 }
             }
         }

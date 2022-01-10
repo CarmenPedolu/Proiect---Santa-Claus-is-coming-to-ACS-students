@@ -44,7 +44,7 @@ public final class SantaGiftsInput {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(final int quantity) {
         this.quantity = quantity;
     }
 }

@@ -2,7 +2,7 @@ package giftdistribution;
 
 import enums.CityStrategyEnum;
 
-public class DistributionContext {
+public final class DistributionContext {
     private StrategyGiftDistribution strategy;
 
     public DistributionContext() {
@@ -13,7 +13,7 @@ public class DistributionContext {
         return strategy;
     }
 
-    public void setStrategy(CityStrategyEnum strategy) {
+    public void setStrategy(final CityStrategyEnum strategy) {
         if (strategy.equals(CityStrategyEnum.ID)) {
             this.strategy = new IdDistribution();
         }

@@ -38,24 +38,88 @@ public final class ChildInput {
     @JsonProperty("elf")
     private String elf;
 
-    public ChildInput() {
+    public static final class Builder {
+        private final int id;
+        private final String lastname;
+        private final String firstname;
+        private final Cities city;
+        private final int age;
+        private final String niceScore;
+        private final List<Category> giftsPreferences;
+        private final String elf;
+        private List<Double> niceScoreHistory = null;
+        private double avgScore = 0;
+        private double assignedBudget = 0;
+        private List<SantaGiftsInput> receivedGifts = null;
+        private AverageScoreStrategy avgScoreStrategy = null;
+        private int niceScoreBonus = 0;
+
+        public Builder(final int id, final String lastname, final String firstname,
+                       final Cities city, final int age, final String niceScore,
+                       final List<Category> giftsPreferences, final String elf) {
+            this.id = id;
+            this.lastname = lastname;
+            this.firstname = firstname;
+            this.city = city;
+            this.age = age;
+            this.niceScore = niceScore;
+            this.giftsPreferences = giftsPreferences;
+            this.elf = elf;
+        }
+
+        public Builder niceScoreHistory(final List<Double> scoreHistory) {
+            this.niceScoreHistory = scoreHistory;
+            return this;
+        }
+
+        public Builder avgScore(final double score) {
+            this.avgScore = score;
+            return this;
+        }
+
+        public Builder assignedBudget(final double budget) {
+            this.assignedBudget = budget;
+            return this;
+        }
+
+        public Builder receivedGifts(final List<SantaGiftsInput> gifts) {
+            this.receivedGifts = gifts;
+            return this;
+        }
+
+        public Builder avgScoreStrategy(final AverageScoreStrategy strategy) {
+            this.avgScoreStrategy = strategy;
+            return this;
+        }
+
+        public Builder niceScoreBonus(final int bonus) {
+            this.niceScoreBonus = bonus;
+            return this;
+        }
+
+        public ChildInput build() {
+            return new ChildInput(this);
+        }
     }
 
-    public ChildInput(ChildInput child) {
-        id = child.getId();
-        lastname = child.getLastname();
-        firstname = child.getFirstname();
-        city = child.getCity();
-        age = child.getAge();
-        niceScore = child.niceScore;
-        giftsPreferences = child.getGiftsPreferences();
-        niceScoreHistory = child.getNiceScoreHistory();
-        avgScore = child.getAvgScore();
-        assignedBudget = child.getAssignedBudget();
-        receivedGifts = child.getReceivedGifts();
-        avgScoreStrategy = child.getAvgScoreStrategy();
-        niceScoreBonus = child.niceScoreBonus;
-        elf = child.getElf();
+    private ChildInput(final Builder builder) {
+        id = builder.id;
+        lastname = builder.lastname;
+        firstname = builder.firstname;
+        city = builder.city;
+        age = builder.age;
+        niceScore = builder.niceScore;
+        giftsPreferences = builder.giftsPreferences;
+        niceScoreHistory = builder.niceScoreHistory;
+        avgScore = builder.avgScore;
+        assignedBudget = builder.assignedBudget;
+        receivedGifts = builder.receivedGifts;
+        avgScoreStrategy = builder.avgScoreStrategy;
+        niceScoreBonus = builder.niceScoreBonus;
+        elf = builder.elf;
+    }
+
+    public ChildInput() {
     }
 
     public int getId() {
@@ -158,7 +222,7 @@ public final class ChildInput {
         return niceScoreBonus;
     }
 
-    public void setNiceScoreBonus(int niceScoreBonus) {
+    public void setNiceScoreBonus(final int niceScoreBonus) {
         this.niceScoreBonus = niceScoreBonus;
     }
 
@@ -166,7 +230,7 @@ public final class ChildInput {
         return elf;
     }
 
-    public void setElf(String elf) {
+    public void setElf(final String elf) {
         this.elf = elf;
     }
 }

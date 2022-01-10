@@ -8,10 +8,10 @@ import fileio.SantaGiftsInput;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Yellow extends Elf {
+public final class Yellow extends Elf {
     @Override
-    public void help(ChildInput child) {
-        if (child.getReceivedGifts() == null) {
+    public void help(final ChildInput child) {
+        if (child.getReceivedGifts().size() == 0) {
             Category prefCategory = child.getGiftsPreferences().get(0);
             // caut cadoul cel mai ieftin
             SantaGiftsInput givedGift = null;
@@ -20,28 +20,26 @@ public class Yellow extends Elf {
             List<SantaGiftsInput> santaGifts = Input.getInput().getInitialData().getSantaGifts();
 
             for (SantaGiftsInput gift : santaGifts) {
-                if (gift.getQuantity() > 0) {
-                    // Give the cheapest gift from that category
-                    if (prefCategory.equals(gift.getCategory())
-                            && child.getAssignedBudget() > gift.getPrice()) {
-                        if (givedGift == null) {
+                // Give the cheapest gift from that category
+                if (prefCategory.equals(gift.getCategory())) {
+                    if (givedGift == null) {
+                        givedGift = gift;
+                    } else {
+                        if (givedGift.getPrice() > gift.getPrice()) {
                             givedGift = gift;
-                        } else {
-                            if (givedGift.getPrice() > gift.getPrice()) {
-                                givedGift = gift;
-                            }
                         }
                     }
                 }
             }
 
             // Add the gift in the received gifts list
-            if (givedGift != null) {
+            if (givedGift != null && givedGift.getQuantity() > 0) {
                 receivedGifts.add(givedGift);
                 child.setReceivedGifts(receivedGifts);
                 // Scad cantitatea cadoului
                 for (SantaGiftsInput gift : santaGifts) {
-                    if (gift.getPrice().equals(givedGift.getPrice()) && gift.getCategory().equals(givedGift.getCategory())) {
+                    if (gift.getPrice().equals(givedGift.getPrice())
+                            && gift.getCategory().equals(givedGift.getCategory())) {
                         gift.setQuantity(gift.getQuantity() - 1);
                     }
                 }

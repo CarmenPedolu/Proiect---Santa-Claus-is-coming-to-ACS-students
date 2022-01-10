@@ -4,7 +4,6 @@ import commands.DeleteYoungAdults;
 import commands.IncreaseAge;
 import commands.RoundInvoker;
 import commands.SumAvgScores;
-import commands.GiftsDistribution;
 import commands.PutSantaComing;
 import elf.ElfFactory;
 import enums.ElvesType;
@@ -51,9 +50,9 @@ public final class NextRound implements Simulation {
         }
 
         //round.execute(new GiftsDistribution(budgetUnit));
-        DistributionContext distribution = new DistributionContext();
-        distribution.setStrategy(Input.getInput().getAnnualChanges().get(nrRound - 1).getStrategy());
-        distribution.sendGifts();
+        DistributionContext strategy = new DistributionContext();
+        strategy.setStrategy(Input.getInput().getAnnualChanges().get(nrRound - 1).getStrategy());
+        strategy.sendGifts();
 
         // aplic modificarile elfului galben
         for (ChildInput child : allChildren) {

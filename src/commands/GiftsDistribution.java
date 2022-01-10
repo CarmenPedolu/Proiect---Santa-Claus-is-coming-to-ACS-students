@@ -8,23 +8,19 @@ import fileio.SantaGiftsInput;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GiftsDistribution implements Command {
-    private final double budgetUnit;
+public final class GiftsDistribution implements Command {
+    private List<ChildInput> children;
 
-    public GiftsDistribution(final double budgetUnit) {
-        this.budgetUnit = budgetUnit;
+    public GiftsDistribution(final List<ChildInput> children) {
+        this.children = children;
     }
 
     @Override
-    public final void execute() {
+    public void execute() {
         Input input = Input.getInput();
-        List<ChildInput> allChildren = input.getInitialData().getChildren();
         List<SantaGiftsInput> santaGifts = input.getInitialData().getSantaGifts();
 
-        for (ChildInput child : allChildren) {
-//            // Calculates and sets the assigned budget for each child
-//            double childAssignedBudget = budgetUnit * child.getAvgScore();
-//            child.setAssignedBudget(childAssignedBudget);
+        for (ChildInput child : children) {
             double childAssignedBudget = child.getAssignedBudget();
 
             List<Category> giftsPref = child.getGiftsPreferences();
@@ -33,16 +29,15 @@ public class GiftsDistribution implements Command {
             for (Category category : giftsPref) {
                 SantaGiftsInput givedGift = null;
                 for (SantaGiftsInput gift : santaGifts) {
-                    if (gift.getQuantity() > 0) {
                         // Give the cheapest gift from that category
-                        if (category.equals(gift.getCategory())
-                                && childAssignedBudget > gift.getPrice()) {
-                            if (givedGift == null) {
+                    if (category.equals(gift.getCategory())
+                            && childAssignedBudget > gift.getPrice()
+                            && gift.getQuantity() > 0) {
+                        if (givedGift == null) {
+                            givedGift = gift;
+                        } else {
+                            if (givedGift.getPrice() > gift.getPrice()) {
                                 givedGift = gift;
-                            } else {
-                                if (givedGift.getPrice() > gift.getPrice()) {
-                                    givedGift = gift;
-                                }
                             }
                         }
                     }
@@ -54,7 +49,8 @@ public class GiftsDistribution implements Command {
                     childAssignedBudget = childAssignedBudget - givedGift.getPrice();
                     // Scad cantitatea cadoului
                     for (SantaGiftsInput gift : santaGifts) {
-                        if (gift.getPrice().equals(givedGift.getPrice()) && gift.getCategory().equals(givedGift.getCategory())) {
+                        if (gift.getPrice().equals(givedGift.getPrice())
+                                && gift.getCategory().equals(givedGift.getCategory())) {
                             gift.setQuantity(gift.getQuantity() - 1);
                         }
                     }

@@ -17,9 +17,9 @@ public enum ElvesType {
     @JsonProperty("white")
     WHITE("white");
 
-    private String value;
+    private final String value;
 
-    ElvesType(String value) {
+    ElvesType(final String value) {
         this.value = value;
     }
 }

@@ -38,11 +38,14 @@ public class SumAvgScores implements Command {
                 niceScoreHistory.add(Double.valueOf(child.getNiceScore()));
                 child.setNiceScoreHistory(niceScoreHistory);
             }
-            //Am adaugat niceScoreBonus
+
             // Calculates the average score for each child
             double avgScore = child.getAvgScoreStrategy().
                     calculateAvgScore(child.getNiceScoreHistory());
-            avgScore += avgScore * child.getNiceScoreBonus() / 100;
+            avgScore += avgScore * child.getNiceScoreBonus() / Constants.HUNDRED;
+            if (avgScore > Constants.TEN) {
+                avgScore = Constants.TEN;
+            }
             child.setAvgScore(avgScore);
             sumAvgScores += avgScore;
         }

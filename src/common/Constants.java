@@ -16,6 +16,9 @@ public final class Constants {
     public static final Integer NINETEEN = 19;
 
     public static final Integer TEN = 10;
+    public static final Integer HUNDRED = 100;
+    public static final Integer THIRTY = 30;
+
 
     private Constants() {
         //constructor for checkstyle
