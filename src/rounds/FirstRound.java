@@ -28,7 +28,7 @@ public final class FirstRound implements Simulation {
             // Calculates and sets the assigned budget for each child
             double childAssignedBudget = budgetUnit * child.getAvgScore();
             child.setAssignedBudget(childAssignedBudget);
-            // aplic modificarile elfilor black si pink
+            // Applies the changes of black and pink elves
             if (child.getElf().equals("black")) {
                 ElfFactory.getHelp(ElvesType.BLACK).help(child);
             }
@@ -37,11 +37,11 @@ public final class FirstRound implements Simulation {
             }
         }
 
-//        round.execute(new GiftsDistribution(budgetUnit));
+        // Send gifts
         DistributionContext distribution = new DistributionContext();
         distribution.sendGifts();
 
-        // aplic modificarile elfului galben
+        // Applies the changes of yellow elves
         for (ChildInput child : allChildren) {
             if (child.getElf().equals("yellow")) {
                 ElfFactory.getHelp(ElvesType.YELLOW).help(child);

@@ -67,36 +67,77 @@ public final class ChildInput {
             this.elf = elf;
         }
 
+        /**
+         * Sets the nice score history
+         *
+         * @param scoreHistory the child's nice score history
+         * @return the builder
+         */
         public Builder niceScoreHistory(final List<Double> scoreHistory) {
             this.niceScoreHistory = scoreHistory;
             return this;
         }
 
+        /**
+         * Sets the average score
+         *
+         * @param score the child's average score
+         * @return the builder
+         */
         public Builder avgScore(final double score) {
             this.avgScore = score;
             return this;
         }
 
+        /**
+         * Sets the child's assigned budget
+         *
+         * @param budget the child's assigned budget
+         * @return the builder
+         */
         public Builder assignedBudget(final double budget) {
             this.assignedBudget = budget;
             return this;
         }
 
+        /**
+         * Sets the received gifts
+         *
+         * @param gifts the child's received gifts
+         * @return the builder
+         */
         public Builder receivedGifts(final List<SantaGiftsInput> gifts) {
             this.receivedGifts = gifts;
             return this;
         }
 
+        /**
+         * Sets the strategy for the average score of the child
+         *
+         * @param strategy the child's strategy for the average score
+         * @return the builder
+         */
         public Builder avgScoreStrategy(final AverageScoreStrategy strategy) {
             this.avgScoreStrategy = strategy;
             return this;
         }
 
+        /**
+         * Sets the nice score bonus
+         *
+         * @param bonus the child's nice score bonus
+         * @return the builder
+         */
         public Builder niceScoreBonus(final int bonus) {
             this.niceScoreBonus = bonus;
             return this;
         }
 
+        /**
+         * Creates the child
+         *
+         * @return the child
+         */
         public ChildInput build() {
             return new ChildInput(this);
         }

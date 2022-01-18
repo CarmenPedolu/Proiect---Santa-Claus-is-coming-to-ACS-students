@@ -13,7 +13,7 @@ public final class Yellow extends Elf {
     public void help(final ChildInput child) {
         if (child.getReceivedGifts().size() == 0) {
             Category prefCategory = child.getGiftsPreferences().get(0);
-            // caut cadoul cel mai ieftin
+            // Finds the cheapest gift
             SantaGiftsInput givedGift = null;
 
             List<SantaGiftsInput> receivedGifts = new ArrayList<>();
@@ -36,7 +36,7 @@ public final class Yellow extends Elf {
             if (givedGift != null && givedGift.getQuantity() > 0) {
                 receivedGifts.add(givedGift);
                 child.setReceivedGifts(receivedGifts);
-                // Scad cantitatea cadoului
+                // Decrement the gift's quantity
                 for (SantaGiftsInput gift : santaGifts) {
                     if (gift.getPrice().equals(givedGift.getPrice())
                             && gift.getCategory().equals(givedGift.getCategory())) {

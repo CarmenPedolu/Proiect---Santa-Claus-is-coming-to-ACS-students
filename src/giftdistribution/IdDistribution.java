@@ -12,7 +12,7 @@ public final class IdDistribution implements StrategyGiftDistribution {
     public void distribute() {
         Input input = Input.getInput();
         List<ChildInput> allChildren = input.getInitialData().getChildren();
-        // fac distribuirea pentru copyChildren
+        // Distribute the gifts
         RoundInvoker round = new RoundInvoker();
         round.execute(new GiftsDistribution(allChildren));
 

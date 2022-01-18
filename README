@@ -2,13 +2,14 @@ Pedolu Carmen-Petronela, 322CA
 Object Oriented Programming Course
 Project - Santa-Claus-is-coming-to-ACS-students
 
-December 2021
+January 2021
 
 Am creat clasa Input, care contine inputul primit si pe care il voi folosi pentru
 output. Outputul este in reprezentat prin clasa SantaComing care contine o lista
 de liste de copii care contin campurile pentru output, reprezentati prin
 ChildOutput. Pentru Clasele Input si SantaComing am folosit design pattern-ul
 Singleton, folosind instantierea eager.
+Pentru clasa ChildInput am folosit design pattern-ul Builder.
 
 In clasa main, am citit inputul de la fiecare test, folosind biblioteca Jackson,
 si pentru fiecare runda am facut simularea si am scris outputul.
@@ -21,21 +22,25 @@ foloseam FirstRound, altfel foloseam NextRound.
 Pentru a realiza simularile pentru FirstRound si NextRound am folosit design
 pattern-ul command, prin care apelam comanda pe care voiam sa o fac.
 In FirstRound, calculam suma scorurilor average de la toti copiii, folosind
-comanda sumAvgScores, calculam budgetUnit, aplicam comanda giftsDistribution
-pentru budgetUit si apoi adaugam copiii in output, creand o noua lista de liste
-si folosind comanda PutSantaComing pentru noua lista de liste.
+comanda sumAvgScores, calculam budgetUnit pentru fiecare copil si aplicam
+modificarile elfilor black si pink, faceam distribuirea cadourilor dupa id,
+apoi aplicam modificarile elfului galben si adaugam copiii in output, creand o
+noua lista de liste si folosind comanda PutSantaComing pentru noua lista de liste.
+
 In NextRound, incrementam varsta tuturor copiilor folosind comanda IncreaseAge,
 sterg copii de tipul Young Adults folosind comanda DeleteYoungAdults, facem
 schimbarile folosind design pattern-ul Abstract Factory, calculam suma scorurilor
 average de la toti copiii, folosind comanda sumAvgScores din clasa, calculam
-budgetUnit, aplicam comanda giftsDistribution pentru budgetUit si apoi adaugam
+budgetUnit pentru fiecare copil si aplicam modificarile elfilor black si pink,
+setam strategy dupa care faceam distribuirea cadourilor si apoi le distribuiam
+dupa strategia respectiva apoi aplicam modificarile elfului galben si adaugam
 copiii in output, folosind actuala lista de liste si comanda putSantaComing
 pentru lista de liste.
 
 Pentru a face update-urile, am folosit pattern-ul Abstract Factory pentru clasa
 UpdatesFactory, si foloseste factory method pentru metoda getUpdate. Astfel, in
 NextRound este apelata metoda getUpdate pentru fiecare tip de update si se face
-update-ul pentru copii, pentru nould buget al mosului si se adauga noii copii si
+update-ul pentru copii, pentru noul buget al mosului si se adauga noii copii si
 noile cadouri, apeland metoda update.
 
 Pentru a calcula scorul mediu al fiecarui copil, am folosit design pattern-ul
@@ -43,3 +48,35 @@ strategy. Astfel, in cadrul comezii SumAvgScores, setam pentru fiecare copil
 strategia prin care se calcula scorul mediu, si apoi calculam scorul mediu
 folosind setata, iar apoi faceam suma tuturor scorurilor, si o retineam in
 campul sumAvgScores din clasa Input.
+
+Pentru a face modificarile elfilor, am folosit pattern-ul Abstract Factory pentru
+clasa ElfFactory, si foloseste factory method pentru metoda getHelp. Astfel,
+cand am vrut sa aplic schimbarile unui elf, verificam daca copilul are acel elf,
+iar daca il avea era apelata metoda getHelp pentru elful de tipul respectiv si
+modificarea se facea apeland metoda help pentru copilul la care se facea modificarea.
+
+Pentru a face distribuirea cadourilor am folosit design pattern-ul Strategy in
+care foloseam clasa DistributionContext in care imi setam strategia de distribuire.
+Am considerat ca initial metoda de distribuire este dupa id, iar dupa ce treceam
+de runda 0 de distribuire setam strategia de de distribuire in functie de
+CityStrategyEnum specific rundei.
+
+In cazul IdDistribution doar am apelat comanda de distribuire pentru toti copiii
+din input, deoarece in input sunt deja sortati dupa Id.
+In cazul NiceScoreDistribution am creat o noua lista care continea toti copiii,
+am sortat lista respectiva dupa average scoruri, iar daca erau egale, dupa id-uri,
+si am apelat comanda de distribuire pentru toti copii din noua lista, intrucat
+se distribue in ordinea de la primul la ultimul din lista. Apoi am copiat cadourile
+primite ale copiilor din noua lista in input.
+In cazul NiceScoreCityDistribution am creat un Map care contine fiecare oras si
+scorul mediu al copiilor din acesta. Astfel am luat fiecare oras si apoi am
+verificat si am calculat scorul mediu al copiilor din acesta, daca nu era niciun
+copil din acel oras, am pus 0 la scorul mediu al orasului. Apoi, am sortat map-ul
+in functie de scorurile medii, iar daca erau egale alfabetic, si am retinut intr-o
+lista de orase ordinea oraselor din map-ul sortat. Am creat o noua lista de copii
+si am adaugat copiii doar cu campurile de care aveam nevoie in comanda de
+distribuire, folosind astfel design pattern-ul Builder din clasa ChildInput, in
+lista in ordinea oraselor din lista de orase si am apelat comanda de distribuire
+pentru toti copii din noua lista, intrucat se distribuie in ordinea de la primul
+la ultimul din lista. Apoi am copiat cadourile primite ale copiilor din noua
+lista in input.

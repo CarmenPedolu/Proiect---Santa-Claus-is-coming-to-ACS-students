@@ -40,7 +40,7 @@ public final class NextRound implements Simulation {
             // Calculates and sets the assigned budget for each child
             double childAssignedBudget = budgetUnit * child.getAvgScore();
             child.setAssignedBudget(childAssignedBudget);
-            // aplic modificarile elfilor black si pink
+            // Applies the changes of black and pink elves
             if (child.getElf().equals("black")) {
                 ElfFactory.getHelp(ElvesType.BLACK).help(child);
             }
@@ -49,12 +49,12 @@ public final class NextRound implements Simulation {
             }
         }
 
-        //round.execute(new GiftsDistribution(budgetUnit));
+        // Sets the strategy for gifts distribution and sends gifts
         DistributionContext strategy = new DistributionContext();
-        strategy.setStrategy(Input.getInput().getAnnualChanges().get(nrRound - 1).getStrategy());
+        strategy.setStrategy(input.getAnnualChanges().get(nrRound - 1).getStrategy());
         strategy.sendGifts();
 
-        // aplic modificarile elfului galben
+        // Applies the changes of yellow elves
         for (ChildInput child : allChildren) {
             if (child.getElf().equals("yellow")) {
                 ElfFactory.getHelp(ElvesType.YELLOW).help(child);

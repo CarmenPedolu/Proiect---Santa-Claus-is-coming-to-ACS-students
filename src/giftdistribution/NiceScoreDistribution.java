@@ -16,8 +16,9 @@ public final class NiceScoreDistribution implements StrategyGiftDistribution {
         Input input = Input.getInput();
         List<ChildInput> allChildren = input.getInitialData().getChildren();
 
-        //fac o noua lista de copii pe care o sortez dupa avg score
+        // Creates a new list which contains all the children
         List<ChildInput> copyChildren = new ArrayList<>(allChildren);
+        // Sorts the list by children's average scores or by children's id
         copyChildren.sort(new Comparator<ChildInput>() {
             @Override
             public int compare(final ChildInput child1, final ChildInput child2) {
@@ -31,11 +32,11 @@ public final class NiceScoreDistribution implements StrategyGiftDistribution {
             }
         });
 
-        // fac distribuirea pentru copyChildren
+        // Send the gifts to the children from the sorted list
         RoundInvoker round = new RoundInvoker();
         round.execute(new GiftsDistribution(copyChildren));
 
-        // copiez cadourile primite ale copiilor din copychildren in cel normal
+        // Copy the received gifts of each child from the previous list in the first list
         for (ChildInput child : copyChildren) {
             for (ChildInput childInput : allChildren) {
                 if (child.getId() == childInput.getId()) {

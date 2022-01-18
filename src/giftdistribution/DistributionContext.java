@@ -13,6 +13,11 @@ public final class DistributionContext {
         return strategy;
     }
 
+    /**
+     * Sets the strategy for gifts distribution
+     *
+     * @param strategy the strategy which will be set
+     */
     public void setStrategy(final CityStrategyEnum strategy) {
         if (strategy.equals(CityStrategyEnum.ID)) {
             this.strategy = new IdDistribution();
@@ -25,6 +30,9 @@ public final class DistributionContext {
         }
     }
 
+    /**
+     * Executes gifts distribution
+     */
     public void sendGifts() {
         strategy.distribute();
     }

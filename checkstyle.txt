@@ -1,15 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\elf\Elf.java:6:5: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\elf\ElfFactory.java:9:5: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:70:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:75:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:80:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:85:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:90:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:95:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\fileio\ChildInput.java:100:9: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\giftdistribution\DistributionContext.java:16:5: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\giftdistribution\DistributionContext.java:28:5: Missing a Javadoc comment. [MissingJavadocMethod]
-[ERROR] C:\Users\carme\OneDrive\Desktop\Proiect---Etapa-1---Santa-Claus-is-coming-to-ACS-students - Copy\.\src\giftdistribution\StrategyGiftDistribution.java:4:5: Missing a Javadoc comment. [MissingJavadocMethod]
 Audit done.
-Checkstyle ends with 12 errors.

@@ -19,8 +19,8 @@ public final class NiceScoreCityDistribution implements StrategyGiftDistribution
     public void distribute() {
         Input input = Input.getInput();
         List<ChildInput> allChildren = input.getInitialData().getChildren();
-        // fac un map care va contine orasul si scorul mediu al copiilor din acel oras
-        Map<Cities, Double> map = new HashMap<>();
+        // Creates a new map which contains all the cities and the cities average score
+        Map<Cities, Double> citiesScores = new HashMap<>();
         for (Cities city : enums.Cities.values()) {
             double avgCitySum = 0;
             int childCount = 0;
@@ -34,11 +34,10 @@ public final class NiceScoreCityDistribution implements StrategyGiftDistribution
             if (avgCitySum != 0) {
                 avgCity = avgCitySum / childCount;
             }
-            map.put(city, avgCity);
+            citiesScores.put(city, avgCity);
         }
-        // sortez mapul in functie de valori si
-        // returnez o lista de orase sortate de la avgscore cel mai mare la cel mai mic
-        List<Cities> citiesSorted = new ArrayList(map.entrySet().stream()
+        // Sort the map by the score or alphabetical and return a list of Cities sorted
+        List<Cities> citiesSorted = new ArrayList(citiesScores.entrySet().stream()
                 .sorted(new Comparator<Map.Entry<Cities, Double>>() {
                     @Override
                     public int compare(final Map.Entry<Cities, Double> city1,
@@ -53,7 +52,7 @@ public final class NiceScoreCityDistribution implements StrategyGiftDistribution
                     }
                 }).map(Map.Entry::getKey).toList());
 
-        //fac o noua lista de copii si adaug copiii in lista noua in ordinea oraselor
+        // Creates a new list which contains all the children added in cities order
         List<ChildInput> copyChildren = new ArrayList<>();
         for (Cities city : citiesSorted) {
             for (ChildInput child : allChildren) {
@@ -67,11 +66,11 @@ public final class NiceScoreCityDistribution implements StrategyGiftDistribution
             }
         }
 
-        // fac distribuirea pentru copyChildren
+        // Send the gifts to the children from the sorted list
         RoundInvoker round = new RoundInvoker();
         round.execute(new GiftsDistribution(copyChildren));
 
-        // copiez cadourile primite ale copiilor din copychildren in cel normal
+        // Copy the received gifts of each child from the previous list in the first list
         for (ChildInput child : copyChildren) {
             for (ChildInput childInput : allChildren) {
                 if (child.getId() == childInput.getId()) {

@@ -22,14 +22,14 @@ public final class GiftsDistribution implements Command {
 
         for (ChildInput child : children) {
             double childAssignedBudget = child.getAssignedBudget();
-
             List<Category> giftsPref = child.getGiftsPreferences();
+
             List<SantaGiftsInput> receivedGifts = new ArrayList<>();
             child.setReceivedGifts(receivedGifts);
             for (Category category : giftsPref) {
                 SantaGiftsInput givedGift = null;
                 for (SantaGiftsInput gift : santaGifts) {
-                        // Give the cheapest gift from that category
+                    // Give the cheapest gift from that category
                     if (category.equals(gift.getCategory())
                             && childAssignedBudget > gift.getPrice()
                             && gift.getQuantity() > 0) {
@@ -47,7 +47,7 @@ public final class GiftsDistribution implements Command {
                     receivedGifts.add(givedGift);
                     child.setReceivedGifts(receivedGifts);
                     childAssignedBudget = childAssignedBudget - givedGift.getPrice();
-                    // Scad cantitatea cadoului
+                    // Decrement the gift's quantity
                     for (SantaGiftsInput gift : santaGifts) {
                         if (gift.getPrice().equals(givedGift.getPrice())
                                 && gift.getCategory().equals(givedGift.getCategory())) {
