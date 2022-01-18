@@ -14,6 +14,11 @@ Pentru clasa ChildInput am folosit design pattern-ul Builder.
 In clasa main, am citit inputul de la fiecare test, folosind biblioteca Jackson,
 si pentru fiecare runda am facut simularea si am scris outputul.
 
+In clasa main, am facut simularea pentru fiecare test folosindu-ma de clasa Test,
+in care am metoda simulateTest, in care se citeste inputul de la testul i,
+folosind biblioteca Jackson, si pentru fiecare runda am facut simularea si am
+scris outputul.
+
 Pentru a simula fiecare runda am folosit un strategy pattern in care foloseam
 clasa RoundContext in care imi setam numarul rundei pe care vreau sa o simulez
 si in functie de numarul rundei setam si tipul strategiei. Daca era runda 0,
